@@ -1,0 +1,36 @@
+{
+  "cli": {
+    "version": ">= 14.4.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "env": {
+        "STRIPE_TEST_KEY": "pk_test_51QztcYRqN1urLAum6oe8bv63m3XrKlD5VFmiqc9z54bRw7rxbLTSZ631p8GMx6qaIQWw9bNyOFpDiLLgTAt0qikX00K0z5NMos"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "STRIPE_PROD_KEY": "pk_live_51QztcYRqN1urLAumQDrNSKM7DQDkzrGdZKxCZKvW4Sw22jZ03HZCOJi6aQZc4sdSp0UY0OmbimAQxf3QRMPdPYTp00yIV9ItoT"
+      },
+      "android": {
+        "buildType": "app-bundle"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
